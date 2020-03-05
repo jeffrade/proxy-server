@@ -11,14 +11,15 @@ $ git clone https://github.com/jeffrade/proxy-server.git
 $ cd proxy-server
 $ bash install.sh
 ```
+Note: There are a series of prompts, so you'll have to sit through the installation
 
 ## What does this do?
 
  - Installs fail2ban
- - Installs nginx
  - Installs pi-hole
- - Installs AWS Route53 DNS updater
- - Installs AWS S3 Glacier uploader
+ - Installs nginx [TODO]
+ - Installs AWS Route53 DNS updater [TODO]
+ - Installs AWS S3 Glacier uploader [TODO]
 
 ## Troubleshooting
 

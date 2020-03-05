@@ -31,4 +31,8 @@ if [[ $SYSTEM != "Linux" ]]; then
   exit 1
 fi
 
+print_info "Installing fail2ban..."
+sudo bash install_fail2ban.sh
+
+
 print_success "Installation complete!"

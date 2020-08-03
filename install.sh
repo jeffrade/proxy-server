@@ -35,6 +35,8 @@ print_info "Installing fail2ban..."
 sudo bash install_fail2ban.sh
 
 print_info "Installing pi-hole..."
-curl -sSL https://install.pi-hole.net | bash
+if [[ -z `command -v pihole` ]]; then
+  curl -sSL https://install.pi-hole.net | bash
+fi
 
 print_success "Installation complete!"

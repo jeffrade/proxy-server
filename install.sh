@@ -40,6 +40,13 @@ if [[ -z `command -v pihole` ]]; then
 fi
 
 print_info "Installing nginx..."
-sudo bash install_nginx.sh
+if [[ -z `command -v nginx` ]]; then
+  sudo bash install_nginx.sh
+fi
+
+print_info "Installing certbot (assumes nginx)..."
+if [[ -z `command -v certbot` ]]; then
+  sudo bash install_certbot.sh
+fi
 
 print_success "Installation complete!"

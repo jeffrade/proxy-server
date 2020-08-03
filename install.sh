@@ -39,4 +39,7 @@ if [[ -z `command -v pihole` ]]; then
   curl -sSL https://install.pi-hole.net | bash
 fi
 
+print_info "Installing nginx..."
+sudo bash install_nginx.sh
+
 print_success "Installation complete!"

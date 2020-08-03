@@ -11,13 +11,14 @@ $ git clone https://github.com/jeffrade/proxy-server.git
 $ cd proxy-server
 $ bash install.sh
 ```
-Note: There are a series of prompts, so you'll have to sit through the installation
+Note: There are a series of prompts, so you'll have to sit through the installation. nginx configuration will need to be manually updated with your domain (hard-coded to example.com).
 
 ## What does this do?
 
  - Installs fail2ban
  - Installs pi-hole
- - Installs nginx [TODO]
+ - Installs nginx
+ - Installs [certbot](https://certbot.eff.org/about/) for TLS/SSL [Let's Encrypt](https://letsencrypt.org/getting-started/) certificates
  - Installs AWS Route53 DNS updater [TODO]
  - Installs AWS S3 Glacier uploader [TODO]
 

@@ -8,7 +8,7 @@ apt-get install -y fail2ban
 systemctl start fail2ban
 systemctl enable fail2ban
 
-cat <<EOF >>/etc/fail2ban/jail.local
+cat <<EOF >/etc/fail2ban/jail.local
 [sshd]
 enabled = true
 port = 22

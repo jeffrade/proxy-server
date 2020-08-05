@@ -23,6 +23,6 @@ Note: There are a series of prompts, so you'll have to sit through the installat
  - Installs AWS S3 Glacier uploader [TODO]
 
 ## Troubleshooting
-
+ - If installing pihole alongside nginx, it is strongly recommended to change the pihole `server.port` to something other than `80`.
  - Feel free to open an [issue](https://github.com/jeffrade/proxy-server/issues/new).
  - Pull Requests welcomed.

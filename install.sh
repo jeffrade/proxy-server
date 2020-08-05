@@ -37,6 +37,8 @@ sudo bash install_fail2ban.sh
 print_info "Installing pi-hole..."
 if [[ -z `command -v pihole` ]]; then
   curl -sSL https://install.pi-hole.net | bash
+  grep "server\.port.*=" /etc/lighttpd/lighttpd.conf
+  print_info "WARNING: It is recommended to set the pihole server port to something other than 80"
 fi
 
 print_info "Installing nginx..."

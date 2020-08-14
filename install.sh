@@ -6,8 +6,6 @@ BLUE='\033[94m'
 GREEN='\033[32;1m'
 RED='\033[91;1m'
 RESET='\033[0m'
-_PWD_=$(pwd)
-_HOME_=${HOME}
 
 print_info() {
     printf "$BLUE$1$RESET\n"
@@ -51,14 +49,7 @@ fi
 
 print_info "Installing DNS updater (checks for aws)..."
 if [[ `command -v aws` ]]; then
-  cat <<EOF >update_dns_record
-# Check if IP change and update DNS record
-source ${_HOME_}/.profile
-*/5 * * * * ${_PWD_}/update_dns_record.sh
-EOF
-  sudo chown root:root update_dns_record
-  sudo chmod 644 update_dns_record
-  sudo mv update_dns_record /etc/cron.d/.
+  sudo bash install_dns_updater.sh
 fi
 
 print_success "Installation complete!"

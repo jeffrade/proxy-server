@@ -35,8 +35,7 @@ sudo bash install_fail2ban.sh
 
 print_info "Installing pi-hole..."
 if [[ -z `command -v pihole` ]]; then
-  curl -sSL https://install.pi-hole.net | bash
-  grep "server\.port.*=" /etc/lighttpd/lighttpd.conf
+  sudo bash install_pihole.sh
   print_info "WARNING: It is recommended to set the pihole server port to something other than 80"
 fi
 
@@ -52,7 +51,6 @@ fi
 
 print_info "Installing DNS updater (checks for aws)..."
 if [[ `command -v aws` ]]; then
-  chmod 555 update_dns_record.sh
   cat <<EOF >update_dns_record
 # Check if IP change and update DNS record
 source ${_HOME_}/.profile

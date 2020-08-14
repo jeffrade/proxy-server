@@ -1,5 +1,5 @@
 #!/bin/bash
-# Usage: Run this script in the background.
+# Usage: Run this script via cron (see install_dns_updater.sh).
 # Assumes AWS_HOST_NAME is set (e.g. proxy.example.com)
 # Assumes AWS_HOSTED_ZONE_ID is set. 
 # Log file can be found at /var/tmp/r53-record.log

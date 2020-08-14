@@ -7,8 +7,7 @@ _PWD_=$(pwd)
 
 cat <<EOF >update_dns_record
 # Check if IP change and update DNS record
-source ${_HOME_}/.profile
-*/5 * * * * ${_PWD_}/update_dns_record.sh
+*/5 * * * * root . ${_HOME_}/.profile && ${_PWD_}/update_dns_record.sh
 EOF
 
 sudo chown root:root update_dns_record

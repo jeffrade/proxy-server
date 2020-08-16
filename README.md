@@ -10,6 +10,7 @@ Initialization scripts for setting up a Linux machine as a DIY proxy server. Thi
 $ aws configure
 $ export AWS_HOSTED_ZONE_ID=my-host-id # Substitute your values
 $ export AWS_HOST_NAME=proxy.example.me # Substitute your values
+$ export S3_BUCKET_NAME=my-s3-bucket # Substitute your values
 $ git clone https://github.com/jeffrade/proxy-server.git
 $ cd proxy-server
 $ bash install.sh
@@ -23,7 +24,7 @@ Note: There are a series of prompts, so you'll have to sit through the installat
  - Installs nginx
  - Installs [certbot](https://certbot.eff.org/about/) for TLS/SSL [Let's Encrypt](https://letsencrypt.org/getting-started/) certificates
  - Installs AWS Route53 DNS updater
- - Installs AWS S3 Glacier uploader [TODO]
+ - Installs AWS S3 Glacier uploader
  - [Dockerize](https://docs.docker.com/engine/install/ubuntu/) this? [TODO]
 
 ## Troubleshooting

@@ -52,4 +52,9 @@ if [[ `command -v aws` ]]; then
   sudo bash install_dns_updater.sh
 fi
 
+print_info "Installing AWS S3 uploader (checks for aws)..."
+if [[ `command -v aws` ]]; then
+  sudo bash install_s3_uploader.sh
+fi
+
 print_success "Installation complete!"

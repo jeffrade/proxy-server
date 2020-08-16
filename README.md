@@ -24,6 +24,7 @@ Note: There are a series of prompts, so you'll have to sit through the installat
  - Installs [certbot](https://certbot.eff.org/about/) for TLS/SSL [Let's Encrypt](https://letsencrypt.org/getting-started/) certificates
  - Installs AWS Route53 DNS updater
  - Installs AWS S3 Glacier uploader [TODO]
+ - [Dockerize](https://docs.docker.com/engine/install/ubuntu/) this? [TODO]
 
 ## Troubleshooting
  - If installing pihole alongside nginx, it is strongly recommended to change the pihole `server.port` to something other than `80` (nginx and certbot installation is known to fail).

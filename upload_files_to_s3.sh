@@ -7,8 +7,8 @@ set -e
 
 NOTIFY_DIR=/var/tmp
 LOG_FILE=${NOTIFY_DIR}/s3-updater.log
-QUEUE_DIR="$(pwd)/queue"
-COMPLETED_DIR="$(pwd)/completed"
+QUEUE_DIR=${NOTIFY_DIR}/queue
+COMPLETED_DIR=${NOTIFY_DIR}/completed
 OLDEST_FILENAME=""
 
 if [[ ! -d "$QUEUE_DIR" || ! -d "$COMPLETED_DIR" ]]; then

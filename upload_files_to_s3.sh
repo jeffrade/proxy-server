@@ -1,11 +1,15 @@
 #!/bin/bash
 # Usage: Run this script via cron (see install_s3_uploader.sh).
 # Assumes S3_BUCKET_NAME is set (e.g. proxy.example.com)
+# For cron, aws-cli needs $HOME set, pass as first arg.
 # Log file can be found at /var/tmp/s3-updater.log
 
 set -e
 
-export HOME=$1
+if [[ -n $1 ]]; then
+  export HOME=$1 # Needed since aws-cli looks for $HOME/.aws/ folder
+fi
+
 NOTIFY_DIR=/var/tmp
 LOG_FILE=${NOTIFY_DIR}/s3-updater.log
 QUEUE_DIR=${NOTIFY_DIR}/queue

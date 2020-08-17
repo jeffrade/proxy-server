@@ -23,7 +23,7 @@ if [[ -n "$OLDEST_FILENAME" ]] ; then
   echo "Found $OLDEST_FILENAME. Waiting 60 seconds in case data being transferred..." >> ${LOG_FILE}
   sleep 60s
   echo "Uploading $OLDEST_FILENAME to S3..." >> ${LOG_FILE}
-  aws s3 cp --storage-class=GLACIER --force-glacier-transfer --only-show-errors $OLDEST_FILENAME s3://$S3_BUCKET_NAME
+  aws s3 cp --storage-class=STANDARD --force-glacier-transfer --only-show-errors $OLDEST_FILENAME s3://$S3_BUCKET_NAME
   echo "Done Uploading. Moving to $COMPLETED_DIR..." >> ${LOG_FILE}
   mv $OLDEST_FILENAME $COMPLETED_DIR
 fi

@@ -14,6 +14,9 @@ OLDEST_FILENAME=""
 if [[ ! -d "$QUEUE_DIR" || ! -d "$COMPLETED_DIR" ]]; then
   mkdir -p $QUEUE_DIR
   mkdir -p $COMPLETED_DIR
+  chmod -R 0777 $QUEUE_DIR
+  chmod +t $QUEUE_DIR # https://superuser.com/a/126076
+  chmod -R 0644 $COMPLETED_DIR
 fi
 
 echo "Executing upload_files_to_s3 script. Finding oldest file..." >> ${LOG_FILE}
